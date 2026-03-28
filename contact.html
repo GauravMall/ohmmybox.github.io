@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | OhmMyBox Consulting Group</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >OhmMyBox</a
+          >
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+              <a
+                href="contact.html"
+                class="btn-nav"
+                style="
+                  background-color: var(--vintage-red);
+                  color: var(--white);
+                "
+                >Let's Talk</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Start the Conversation.</h1>
+        <p>
+          Whether you have a seed of an idea or an enterprise ready to scale,
+          our family is here to help yours succeed.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-page-section bg-white">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>
+              Fill out the form to schedule your initial consultation. We aim to
+              respond to all inquiries within 24 business hours.
+            </p>
+
+            <div class="info-block">
+              <h3>Our Office</h3>
+              <p>
+                21st floor, Athens Tower <br>
+                Leoforos Mesogeion 2-4, Athens 11527
+              </p>
+            </div>
+
+            <div class="info-block">
+              <h3>Direct Contact</h3>
+              <p>
+                <strong>Email:</strong> info@ohmmybox.com <br>
+                <strong>Phone:</strong> (+30) 210 745 4304
+              </p>
+            </div>
+
+            <div class="info-block">
+              <h3>Business Hours</h3>
+              <p>
+                Monday - Friday: 9:00 AM - 6:00 PM (EST) <br>
+                Saturday: 9:00 AM - 1:00 PM (EST) <br>
+                Sunday: Closed
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-form-container bg-off-white">
+            <form action="https://formsubmit.co/ohmmybox@outlook.com" method="POST">
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Consultation Request"
+              />
+
+              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://ohmmybox.gr/thanks.html">
+
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Jane Doe"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@company.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Primary Interest</label>
+                <select id="service" name="service">
+                  <option value="idea_conception">Idea & Conception</option>
+                  <option value="business_planning">Business Planning</option>
+                  <option value="financial_strategy">Financial Strategy</option>
+                  <option value="hiring_staffing">Hiring & Staffing</option>
+                  <option value="long_term_planning">Long-Term Planning</option>
+                  <option value="full_execution">A-to-Z Execution</option>
+                  <option value="other">Other / General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell us about your business</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Briefly describe your current challenges or goals..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary"
+                style="width: 100%; border: none; cursor: pointer"
+              >
+                Request Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <h2>OhmMyBox Consulting Group</h2>
+          <p>Elevating businesses through strategic partnership.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@ohmmybox.com</p>
+          <p>Phone: (+30) 210 745 4304</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 OhmMyBox Consulting Group. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

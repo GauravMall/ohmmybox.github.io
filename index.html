@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OhmMyBox Consulting Group</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html" style="text-decoration: none; color: inherit"
+            >OhmMyBox</a
+          >
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="index.html"
+                style="color: var(--olive-green); font-weight: bold"
+                >Home</a
+              >
+            </li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="btn-nav">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Turn Your Vision Into a Thriving Reality.</h1>
+        <p>
+          From the seed of an idea to long-term strategic execution, OhmMyBox
+          Consulting Group is your dedicated partner in building a successful
+          business from the ground up.
+        </p>
+        <a href="#contact" class="btn-primary">Start Your Journey</a>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title">Comprehensive Business Solutions</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Idea & Conception</h3>
+            <p>
+              We help you brainstorm, refine, and validate your business ideas,
+              ensuring there is a strong market demand for your vision.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Business Planning</h3>
+            <p>
+              Develop rock-solid, actionable business plans that outline your
+              path to success, appealing to investors and stakeholders alike.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Financial Strategy</h3>
+            <p>
+              Master your margins. We advise on initial funding, budgeting,
+              financial modeling, and sustainable revenue generation.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Hiring & Staffing</h3>
+            <p>
+              Your team is your greatest asset. We guide you through
+              organizational design, recruitment strategies, and building
+              company culture.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>Long-Term Planning</h3>
+            <p>
+              Future-proof your enterprise with scaleable operations, strategic
+              growth mapping, and competitive analysis.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>A-to-Z Execution</h3>
+            <p>
+              We don't just advise; we partner with you on everything from
+              structural setup to daily operational workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Talk?</h2>
+        <p>
+          Take the first step towards transforming your business. Reach out
+          today to schedule your initial consultation with our family of
+          experts.
+        </p>
+        <a href="contact.html" class="btn-primary cta-btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="testimonials-section bg-off-white">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom: 30px">
+          Client Success
+        </h2>
+
+        <div class="testimonial-container">
+          <div class="testimonial-slide active">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              We had a vision but no roadmap. OhmMyBox took our raw concept and
+              stress-tested it until it was bulletproof. Their financial
+              modeling not only clarified our path forward but directly helped
+              us secure our seed round of funding.
+            </p>
+            <p class="quote-author">
+              <strong>Tawatchai Petkaew</strong><br />Founder, TechFlow
+              Solutions
+            </p>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              The candor this team brings is refreshing. They didn't just hand
+              us a generic playbook; they got in the trenches with us to
+              restructure our executive team and revamp our hiring processes
+              during a critical, chaotic growth phase.
+            </p>
+            <p class="quote-author">
+              <strong>Andy Thorne</strong><br />CEO, Thorne Global Logistics
+            </p>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              Working with a family-run consultancy means they inherently
+              understand the stakes. Their A-to-Z execution allowed us to expand
+              our legacy business into three new markets seamlessly, without
+              ever losing our core company culture.
+            </p>
+            <p class="quote-author">
+              <strong>Elena Rostova</strong><br />Director, The Rostova Group
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <h2>OhmMyBox Consulting Group</h2>
+          <p>Elevating businesses through strategic partnership.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@ohmmybox.com</p>
+          <p>Phone: (+30) 210 745 4304</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 OhmMyBox Consulting Group. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      let slideIndex = 1;
+      let timer;
+
+      // Start the rotation when the page loads
+      showSlides(slideIndex);
+      startTimer();
+
+      // Allows users to click the dots to change slides manually
+      function currentSlide(n) {
+        clearTimeout(timer);
+        showSlides((slideIndex = n));
+        startTimer();
+      }
+
+      // The logic to switch slides and update the active dot
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("testimonial-slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          slides[i].classList.remove("active");
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].classList.add("active");
+        dots[slideIndex - 1].className += " active";
+      }
+
+      // Automatically change the slide every 6 seconds (6000 milliseconds)
+      function startTimer() {
+        timer = setTimeout(function () {
+          slideIndex++;
+          showSlides(slideIndex);
+          startTimer();
+        }, 6000);
+      }
+    </script>
+  </body>
+</html>

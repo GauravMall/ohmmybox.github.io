@@ -1,0 +1,682 @@
+/* --- Variables & Global Resets --- */
+:root {
+    /* Color Palette */
+    --vintage-red: #782924; /* Rich, dark vintage leather red */
+    --olive-green: #5B6640; /* Professional, subdued olive green */
+    --white: #ffffff;
+    --off-white: #fbfaf9;
+    --text-dark: #2c2c2c;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Prioritizing Hoefler Text, falling back to Playfair Display */
+    font-family: "Hoefler Text", "Playfair Display", Georgia, serif;
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vintage-red);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--text-light);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--olive-green);
+}
+
+.btn-nav {
+    border: 1px solid var(--vintage-red);
+    padding: 8px 20px;
+    color: var(--vintage-red);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--vintage-red);
+    color: var(--white);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--vintage-red);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #f1dfde; /* Slightly faded white for readability */
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--olive-green);
+    color: var(--white);
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4a5434; /* Darker olive on hover */
+}
+
+/* --- Services Section --- */
+.services-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--vintage-red);
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-top: 8px solid var(--olive-green);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--vintage-red);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--vintage-red);
+    color: var(--white);
+    padding: 60px 0 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-contact h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+   NEW STYLES FOR SERVICES.HTML 
+   ========================================= */
+
+/* Smaller Hero for Sub-pages */
+.page-hero {
+    background-color: var(--olive-green);
+    color: var(--white);
+    padding: 70px 0;
+    text-align: center;
+    border-bottom: 8px solid var(--vintage-red);
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #e0e4d8;
+}
+
+/* Detailed Services Sections */
+.detailed-services {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-detail-block {
+    padding: 80px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-off-white {
+    background-color: var(--off-white);
+}
+
+.service-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-heading {
+    font-size: 2.2rem;
+    color: var(--vintage-red);
+    margin-bottom: 10px;
+}
+
+.service-lead {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--olive-green);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-list li {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+}
+
+/* Custom Bullet Points using Olive Green */
+.service-list li::before {
+    content: "■";
+    color: var(--olive-green);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+}
+
+.service-list strong {
+    color: var(--text-dark);
+}
+
+/* =========================================
+   NEW STYLES FOR ABOUT.HTML 
+   ========================================= */
+
+/* About Section Content */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.about-content .text-block {
+    flex: 1;
+}
+
+.text-block h2 {
+    font-size: 2.2rem;
+    color: var(--vintage-red);
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* Team Section */
+.team-section {
+    padding: 80px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background-color: var(--white);
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--vintage-red);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-color: var(--olive-green);
+    border: 4px solid var(--off-white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    display: block;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: var(--vintage-red);
+    margin-bottom: 5px;
+}
+
+.team-title {
+    font-weight: 600;
+    color: var(--olive-green);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-bio {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments for About Page */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* =========================================
+   NEW STYLES FOR CONTACT.HTML 
+   ========================================= */
+
+.contact-page-section {
+    padding: 80px 0;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: var(--vintage-red);
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.info-block {
+    margin-bottom: 30px;
+}
+
+.info-block h3 {
+    font-size: 1.2rem;
+    color: var(--olive-green);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-block p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    flex: 1;
+    padding: 40px;
+    border-top: 5px solid var(--vintage-red);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-family: sans-serif; /* A clean sans-serif for form labels is often easier to read */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Premium focus effect for form inputs */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--olive-green);
+    box-shadow: 0 0 0 3px rgba(91, 102, 64, 0.1); /* Soft olive glow */
+}
+
+/* Form Responsive adjustments */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+}
+
+/* =========================================
+   CALL TO ACTION (CTA) SECTION
+   ========================================= */
+
+.cta-section {
+    background-color: var(--olive-green);
+    color: var(--white);
+    padding: 70px 0;
+    text-align: center;
+    border-top: 4px solid var(--vintage-red);
+    border-bottom: 4px solid var(--vintage-red);
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #e4e8dc; /* Soft, readable off-white */
+}
+
+/* Custom button styling for the green background */
+.cta-btn {
+    background-color: var(--white);
+    color: var(--olive-green);
+    font-weight: 700;
+    border: 2px solid var(--white);
+}
+
+.cta-btn:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* =========================================
+   THANK YOU PAGE STYLES
+   ========================================= */
+
+.thankyou-section {
+    padding: 120px 0;
+    text-align: center;
+    min-height: 60vh; /* Ensures the page is tall enough even with little text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankyou-content {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 50px 40px;
+    border-top: 5px solid var(--olive-green);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.thankyou-heading {
+    font-size: 3rem;
+    color: var(--vintage-red);
+    margin-bottom: 20px;
+}
+
+.thankyou-text {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.thankyou-content .btn-primary {
+    margin-top: 20px;
+}
+
+/* =========================================
+   ROTATING TESTIMONIALS SECTION
+   ========================================= */
+
+.testimonials-section {
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 250px; /* Keeps the section height stable so the page doesn't jump */
+}
+
+.testimonial-slide {
+    display: none; /* Hides all slides by default */
+    animation: fadeEffect 1s; /* Smooth fade in */
+}
+
+.testimonial-slide.active {
+    display: block; /* Shows only the active slide */
+}
+
+.quote-mark {
+    font-size: 5rem;
+    color: var(--vintage-red);
+    line-height: 1;
+    font-family: Georgia, serif; /* Georgia makes the best looking curly quotes */
+    margin-bottom: -20px;
+    opacity: 0.3;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    color: var(--olive-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quote-author strong {
+    color: var(--text-dark);
+}
+
+/* Slider Dots */
+.testimonial-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--olive-green);
+}
+
+/* Fade Animation */
+@keyframes fadeEffect {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .quote-text { font-size: 1.2rem; }
+    .testimonial-container { min-height: 300px; }
+}
